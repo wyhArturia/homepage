@@ -14,7 +14,7 @@
 
 <div class="container">
 
-<h1>Yuhang Wu</h1>
+<h1>Yuhang Wu 吴雨航</h1>
 
 <div class="row">
   <div class="col">
@@ -28,6 +28,7 @@
 University of California, Berkeley<br />
 Email: wuyh &#x1D00;&#x1D1B; berkeley.edu<br />
 </td></tr></table>
+
 <hr />
 
 <h3>Preprints</h3>
@@ -36,6 +37,41 @@ Email: wuyh &#x1D00;&#x1D1B; berkeley.edu<br />
  <li><a class="font-italic" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4077638">Non-stationary A/B Tests: Optimal Variance Reduction, Bias Correction, and Valid Inference</a><br>Yuhang Wu, Guangyu Zhang, Zeyu Zheng, Zuohua Zhang, Chu Wang</li>
 </ol>
 
+<h1>Push</h1>
+<p>My friend <a href="https://jiaqiyang.com/" target=&ldquo;blank&rdquo;>Jiaqi Yang</a> is hardworking, but that's not enough! Click following buttons to push him!</p> 
+<button type="button" onclick="push()">Push</button> <button type="button" onclick="pushard()">Push hard!</button>
+
+<script>
+function timedCount() {
+	c = c + 1;
+	document.getElementById('count').innerHTML = "You have pushed Jiaqi " + c + " times.";
+	t = setTimeout(function() {
+	  timedCount()
+	}, 2);
+}
+
+function push()
+{
+	c = c + 1;
+	document.getElementById('count').innerHTML = "You have pushed Jiaqi " + c + " times.";
+}
+
+function pushard()
+{
+	timedCount();
+}
+</script>
+
+<script>
+  var c = 0;
+</script>
+
+<div class="infoblock">
+<div class="blockcontent">
+<p id="count">You have pushed Jiaqi 0 times.</p>
+</div></div>
+<div id="footer">
+<div id="footer-text">
 
 </div>
 
