@@ -1,93 +1,407 @@
 
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal website of Yuhang Wu.">
+    <title>Yuhang Wu</title>
 
-<title>Yuhang Wu</title>
-<meta charset="utf-8">
-<!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        :root {
+            --text: #292d32;
+            --muted: #69717c;
+            --accent: #315f91;
+            --border: #e7e9ec;
+            --background: #ffffff;
+            --max-width: 920px;
+        }
 
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #193d65;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 65px 32px 80px;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 650;
+            letter-spacing: -1.1px;
+            margin: 0 0 38px;
+            color: #20262d;
+        }
+
+        h1 span {
+            font-size: 27px;
+            font-weight: 500;
+            margin-left: 5px;
+        }
+
+        .profile {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 42px;
+            align-items: start;
+            margin-bottom: 42px;
+        }
+
+        .profile-photo {
+            width: 100%;
+            aspect-ratio: 3 / 2;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .bio p {
+            margin: 0 0 15px;
+        }
+
+        .position {
+            font-size: 16px;
+            font-weight: 550;
+            color: #343b44;
+        }
+
+        .contact {
+            margin-top: 22px;
+            padding-top: 17px;
+            border-top: 1px solid var(--border);
+        }
+
+        .contact strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+
+        section {
+            margin-top: 38px;
+        }
+
+        h2 {
+            font-size: 19px;
+            font-weight: 650;
+            letter-spacing: -0.3px;
+            margin: 0 0 17px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+            color: #252b32;
+        }
+
+        .research {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .publications {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .publications li {
+            margin-bottom: 23px;
+            padding-left: 17px;
+            border-left: 2px solid #e8edf2;
+        }
+
+        .paper-title {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .authors {
+            color: #515963;
+            margin-top: 3px;
+        }
+
+        .authors strong {
+            color: #252b32;
+            font-weight: 650;
+        }
+
+        .venue {
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 2px;
+        }
+
+        .experience-list,
+        .service-list {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .experience-list li,
+        .service-list li {
+            padding-left: 3px;
+            margin-bottom: 12px;
+        }
+
+        .experience-date {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .service-list p {
+            margin: 0;
+        }
+
+        @media (max-width: 680px) {
+            .container {
+                padding: 38px 21px 55px;
+            }
+
+            h1 {
+                font-size: 29px;
+                margin-bottom: 27px;
+            }
+
+            h1 span {
+                font-size: 23px;
+            }
+
+            .profile {
+                grid-template-columns: 1fr;
+                gap: 23px;
+            }
+
+            .profile-photo {
+                max-width: 360px;
+            }
+
+            section {
+                margin-top: 32px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
 <div class="container">
 
-<h1>Yuhang Wu 吴雨航</h1>
+    <h1>Yuhang Wu <span>吴雨航</span></h1>
 
-<div class="row">
+    <div class="profile">
+        <img class="profile-photo"
+             src="photo230728.JPG"
+             alt="My photo">
+
+        <div class="bio">
+            <p class="position">
+                I'm a quantitative analyst at KEPL group,
+                Cubist systematic strategies.
+            </p>
+
+            <p>
+                I received my Ph.D. in Operations Research from
+                UC Berkeley's
+                <a href="https://ieor.berkeley.edu/">IEOR</a>
+                department and
+                <a href="https://bair.berkeley.edu/">Berkeley AI Research Lab</a>
+                (BAIR) in three and a half years.
+            </p>
+
+            <p>
+                Previously, I received my B.S. degree in Statistics from
+                <a href="http://english.math.pku.edu.cn/">
+                School of Mathematical Sciences</a>
+                at Peking University.
+            </p>
+
+            <div class="contact">
+                <strong>Contact</strong>
+                University of California, Berkeley<br>
+                Email: wuyh &#x1D00;&#x1D1B; berkeley.edu
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <h2>Research Interests</h2>
+        <p class="research">
+            I mainly work on applied statistics and probability,
+            especially theory and applications of experimental design
+            and causal inference.
+        </p>
+    </section>
+
+    <section>
+        <h2>Selected Publications and Manuscripts</h2>
+
+        <ol class="publications">
+
+            <li>
+                <a class="paper-title"
+                   href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4640583">
+                    A/B Test and Online Experiment Under Diminishing
+                    Marginal Effects: Regret Minimization and Statistical Inference
+                </a>
+                <div class="authors">
+                    Jingxu Xu, <strong>Yuhang Wu</strong>,
+                    Yingfei Wang, Chu Wang, Zeyu Zheng
+                </div>
+                <div class="venue">
+                    <i>SIGKDD Conference on Knowledge Discovery and
+                    Data Mining (<strong>KDD</strong>), 2025</i>
+                </div>
+            </li>
+
+            <li>
+                <a class="paper-title"
+                   href="https://arxiv.org/abs/2501.18962">
+                    Spend Wisely: Maximizing Post-Training Gains in
+                    Iterative Synthetic Data Boostrapping
+                </a>
+                <div class="authors">
+                    Pu Yang, Yunzhen Feng, Ziyuan Chen,
+                    <strong>Yuhang Wu</strong>, Zhuoyuan Li
+                </div>
+                <div class="venue">
+                    <i>Advances in Neural Information Processing Systems
+                    (<strong>NeurIPS</strong>), 2025, Spotlight</i>
+                </div>
+            </li>
+
+            <li>
+                <a class="paper-title"
+                   href="https://arxiv.org/abs/2210.06737">
+                    Technical Note: Adaptive A/B Tests and Simultaneous
+                    Treatment Parameter Optimization
+                </a>
+                <div class="authors">
+                    <strong>Yuhang Wu</strong>, Zeyu Zheng,
+                    Guangyu Zhang, Zuohua Zhang, Chu Wang
+                </div>
+                <div class="venue">
+                    Extended abstract appeared in
+                    <i>Marketplace Innovation Workshop (<strong>MIW</strong>), 2024</i><br>
+                    <i><strong>Operations Research</strong>, to appear</i>
+                </div>
+            </li>
+
+            <li>
+                <a class="paper-title"
+                   href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4013301">
+                    Performance Evaluation and Stochastic Optimization
+                    with Gradually Changing Non-Stationary Data
+                </a>
+                <div class="authors">
+                    <strong>Yuhang Wu</strong>, Zeyu Zheng
+                </div>
+                <div class="venue">
+                    <i><strong>Operations Research</strong>, to appear</i>
+                </div>
+            </li>
+
+            <li>
+                <a class="paper-title"
+                   href="https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2022.01205">
+                    Non-stationary A/B Tests: Optimal Variance Reduction,
+                    Bias Correction, and Valid Inference
+                </a>
+                <div class="authors">
+                    <strong>Yuhang Wu</strong>, Zeyu Zheng,
+                    Guangyu Zhang, Zuohua Zhang, Chu Wang
+                </div>
+                <div class="venue">
+                    <i><strong>Management Science</strong>, 2024</i>
+                </div>
+            </li>
+
+            <li>
+                <a class="paper-title"
+                   href="https://arxiv.org/abs/2304.04091">
+                    Best Arm Identification with Fairness Constraints
+                    on Subpopulations
+                </a>
+                <div class="authors">
+                    <strong>Yuhang Wu</strong>, Zeyu Zheng, Tingyu Zhu
+                </div>
+                <div class="venue">
+                    <i>Winter Simulation Conference (<strong>WSC</strong>), 2023</i>
+                </div>
+            </li>
+
+            <li>
+                <a class="paper-title"
+                   href="https://assets.amazon.science/c4/98/f50234c94d12aa892da2aa6fd5a7/non-stationary-a-b-tests.pdf">
+                    Non-stationary A/B Tests
+                </a>
+                <div class="authors">
+                    <strong>Yuhang Wu</strong>, Zeyu Zheng,
+                    Guangyu Zhang, Zuohua Zhang, Chu Wang
+                </div>
+                <div class="venue">
+                    <i>SIGKDD Conference on Knowledge Discovery and
+                    Data Mining (<strong>KDD</strong>), 2022</i>
+                </div>
+            </li>
+
+        </ol>
+    </section>
+
+    <section>
+        <h2>Experiences</h2>
+        <ul class="experience-list">
+            <li>
+                Quantitative Analyst Internship, KEPL Group,
+                Cubist Systematic Strategies<br>
+                <span class="experience-date">
+                    New York, US, May-August 2024
+                </span>
+                <p>
+                    KEPL is a fast-growing multi-asset systematic trading
+                    team at Cubist/Point72. We are actively looking for
+                    quant researcher/engineer talents at different levels.
+                    If you are interested, feel free to contact me.
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Services</h2>
+        <p>Rreviewer for:</p>
+        <ul class="service-list">
+            <li>
+                <p>Journals: Operations Research, Management Science,
+                Naval Research Logistics, Probability in the Engineering
+                and Informational Sciences</p>
+            </li>
+            <li>
+                <p>Conferences: ICML, AISTATS, KDD, WSC</p>
+            </li>
+        </ul>
+    </section>
+
 </div>
-<table class="imgtable"><tr><td>
-<img src="photo230728.JPG" alt="My photo" width="480px" height="320px" />&nbsp;</td>
-<td align="left">
-  <div class="col">
-    <p>I'm a quantitative analyst at KEPL group, Cubist systematic strategies. </p><br />
-    
-	I received my Ph.D. in Operations Research from UC Berkeley's <a href=https://ieor.berkeley.edu/>IEOR</a> department and <a href=https://bair.berkeley.edu/>Berkeley AI Research Lab</a> (BAIR) in three and a half years. 
-	    Previously, I received my B.S. degree in Statistics from <a href=http://english.math.pku.edu.cn/>School of Mathematical Sciences</a> at Peking University. <br />
-
-  </div>
-</div>
-
-<hr />
-	
-<h3>Contact</h3>
-<p>University of California, Berkeley<br />
-Email: wuyh &#x1D00;&#x1D1B; berkeley.edu<br />
-</td></tr></table>
-
-<hr />
-
-<h3>Research Interests</h3>
-<ol>
-I mainly work on applied statistics and probability, especially theory and applications of experimental design and causal inference.
-</ol>
-
-<hr />
-
-<h3>Selected Publications and Manuscripts</h3>
-<ol>
-<li><a class="font-italic" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4640583">A/B Test and Online Experiment Under Diminishing Marginal Effects: Regret Minimization and Statistical Inference </a> Jingxu Xu, <b>Yuhang Wu</b>, Yingfei Wang, Chu Wang, Zeyu Zheng<br />
-	<i>SIGKDD Conference on Knowledge Discovery and Data Mining (<b>KDD</b>), 2025</i></li>
-<li><a class="font-italic" href="https://arxiv.org/abs/2501.18962">Spend Wisely: Maximizing Post-Training Gains in Iterative Synthetic Data Boostrapping </a> Pu Yang, Yunzhen Feng, Ziyuan Chen, <b>Yuhang Wu</b>, Zhuoyuan Li<br />
-	<i>Advances in Neural Information Processing Systems (<b>NeurIPS</b>), 2025, Spotlight </i></li>
-<li><a class="font-italic" href="https://arxiv.org/abs/2210.06737">Technical Note: Adaptive A/B Tests and Simultaneous Treatment Parameter Optimization</a> <b>Yuhang Wu</b>, Zeyu Zheng, Guangyu Zhang, Zuohua Zhang, Chu Wang<br />
- 	Extended abstract appeared in <i>Marketplace Innovation Workshop (<b>MIW</b>), 2024</i><br />
-	<i><b>Operations Research</b>, to appear</i></li>
- <li><a class="font-italic" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4013301">Performance Evaluation and Stochastic Optimization with Gradually Changing Non-Stationary Data</a> <b>Yuhang Wu</b>, Zeyu Zheng<br />
-	<i><b>Operations Research</b>, to appear</i></li>
- <li><a class="font-italic" href="https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2022.01205">Non-stationary A/B Tests: Optimal Variance Reduction, Bias Correction, and Valid Inference</a> <b>Yuhang Wu</b>, Zeyu Zheng, Guangyu Zhang, Zuohua Zhang, Chu Wang<br />
-	<i><b>Management Science</b>, 2024</i></li>
-<li><a class="font-italic" href="https://arxiv.org/abs/2304.04091">Best Arm Identification with Fairness Constraints on Subpopulations</a> <b>Yuhang Wu</b>, Zeyu Zheng, Tingyu Zhu<br>
-	<i>Winter Simulation Conference (<b>WSC</b>), 2023</i></li>	
- <li><a class="font-italic" href="https://assets.amazon.science/c4/98/f50234c94d12aa892da2aa6fd5a7/non-stationary-a-b-tests.pdf">Non-stationary A/B Tests</a> <b>Yuhang Wu</b>, Zeyu Zheng, Guangyu Zhang, Zuohua Zhang, Chu Wang<br>
- 	<i>SIGKDD Conference on Knowledge Discovery and Data Mining (<b>KDD</b>), 2022</i></li>
-</ol>
-
-
-<hr />
-
-<h3>Experiences</h3>
-<ul>
-<li>Quantitative Analyst Internship, KEPL Group, Cubist Systematic Strategies<br/>
-New York, US, May-August 2024 <br/>
-KEPL is a fast-growing multi-asset systematic trading team at Cubist/Point72. We are actively looking for quant researcher/engineer talents at different levels. If you are interested, feel free to contact me. </li>
-</ul>	
-
-<hr />
-
-<h3>Services</h3>
-<p>Rreviewer for: </p>
-<ul>
-<li><p>Journals: Operations Research, Management Science, Naval Research Logistics, Probability in the Engineering and Informational Sciences</p>
-</li>
-<li><p>Conferences: ICML, AISTATS, KDD, WSC</p>
-</li>
-</ul>
-
-
 </body>
-
 </html>
-
